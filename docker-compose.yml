@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # ============================================================================
+  # Application Service (CodeIgniter 4 + Apache)
+  # ============================================================================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sim_surat_app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:80"
+    environment:
+      - CI_ENVIRONMENT=${CI_ENVIRONMENT:-production}
+      - app.baseURL=${APP_URL:-http://localhost:8080/}
+      - app.appTimezone=Asia/Jakarta
+      - database.default.hostname=${DB_HOST:-db}
+      - database.default.database=${DB_DATABASE:-db_nomor_surat}
+      - database.default.username=${DB_USER:-user_surat}
+      - database.default.password=${DB_PASSWORD:-surat_secret_password123}
+      - database.default.DBDriver=MySQLi
+      - database.default.port=${DB_PORT:-3306}
+      - database.default.charset=utf8mb4
+      - database.default.DBCollat=utf8mb4_unicode_ci
+      - security.csrfProtection=session
+    volumes:
+      # Persistent storage untuk file surat yang diunggah
+      - surat_uploads:/var/www/html/writable/uploads
+      - surat_logs:/var/www/html/writable/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - surat_network
+
+  # ============================================================================
+  # Database Service (MariaDB / MySQL)
+  # ============================================================================
+  db:
+    image: mariadb:10.11
+    container_name: sim_surat_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD:-root_secret_password123}
+      - MYSQL_DATABASE=${DB_DATABASE:-db_nomor_surat}
+      - MYSQL_USER=${DB_USER:-user_surat}
+      - MYSQL_PASSWORD=${DB_PASSWORD:-surat_secret_password123}
+    volumes:
+      # Persistent storage untuk data database
+      - db_data:/var/lib/mysql
+    ports:
+      - "${DB_EXTERNAL_PORT:-3307}:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - surat_network
+
+# ==============================================================================
+# Persistent Volumes & Networks
+# ==============================================================================
+volumes:
+  db_data:
+    name: sim_surat_db_data
+  surat_uploads:
+    name: sim_surat_uploads_data
+  surat_logs:
+    name: sim_surat_logs_data
+
+networks:
+  surat_network:
+    name: sim_surat_network
+    driver: bridge

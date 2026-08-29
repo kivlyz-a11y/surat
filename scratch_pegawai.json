@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Drs Rd. Mahbub Tobri, M.H.",
+    "username": "196005191989031001",
+    "email": "196005191989031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Ketua",
+    "is_active": 1
+  },
+  {
+    "name": "Dr. Drs. Nurul Huda, S.H., M.H.",
+    "username": "196307121992031005",
+    "email": "196307121992031005@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Wakil Ketua",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. Wanjofrizal",
+    "username": "196508041993031005",
+    "email": "196508041993031005@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. H. Juaini, S.H.",
+    "username": "196705111994031003",
+    "email": "196705111994031003@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. H. Rudi Hartono, S.H., M.H.",
+    "username": "196804141994031001",
+    "email": "196804141994031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. Jakfaroni, S.H.",
+    "username": "196905081994031003",
+    "email": "196905081994031003@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. Zulkifli",
+    "username": "196403131991031002",
+    "email": "196403131991031002@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Mahmud, S.H., M.Hum.",
+    "username": "196208301992031001",
+    "email": "196208301992031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs Parhanuddin",
+    "username": "196607171994031008",
+    "email": "196607171994031008@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs Nur Amin, M.H.",
+    "username": "196407201993031002",
+    "email": "196407201993031002@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. Erik Sumarna, S.H., M.A.",
+    "username": "196808111994031005",
+    "email": "196808111994031005@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Dr. Ahmad Farhat, S.Ag., S.H., M.H.I.",
+    "username": "197109261991031002",
+    "email": "197109261991031002@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Dr. Yusri, S.Ag., M.H.",
+    "username": "197110291998031001",
+    "email": "197110291998031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Hakim Tinggi",
+    "is_active": 1
+  },
+  {
+    "name": "Drs. Hasani, S.H.",
+    "username": "196501211993031001",
+    "email": "196501211993031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Panitera",
+    "is_active": 1
+  },
+  {
+    "name": "Dr. Ita Sasmita, S.H., M.H.",
+    "username": "197808012003121007",
+    "email": "197808012003121007@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Sekretaris",
+    "is_active": 1
+  },
+  {
+    "name": "Erfi Warni, S.E., M.M.",
+    "username": "198703202009122007",
+    "email": "198703202009122007@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Bagian Perencanaan dan Kepegawaian",
+    "is_active": 1
+  },
+  {
+    "name": "Abdul Basit Fikri, S.H., S.Ag.",
+    "username": "197409072001121004",
+    "email": "197409072001121004@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Bagian Umum dan Keuangan",
+    "is_active": 1
+  },
+  {
+    "name": "H. Muhammad Sahir, S.Ag.",
+    "username": "196912192001121002",
+    "email": "196912192001121002@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Panitera Pengganti",
+    "is_active": 1
+  },
+  {
+    "name": "Chartiko Setia Utomo, S.Sos, S.H.",
+    "username": "196910071990031001",
+    "email": "196910071990031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Panitera Pengganti",
+    "is_active": 1
+  },
+  {
+    "name": "Drs M. Nasir",
+    "username": "196502051998031001",
+    "email": "196502051998031001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Panitera Pengganti",
+    "is_active": 1
+  },
+  {
+    "name": "Dra. Marianah, S.H.",
+    "username": "196506102001122001",
+    "email": "196506102001122001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Panitera Pengganti",
+    "is_active": 1
+  },
+  {
+    "name": "Rustam, S.H.",
+    "username": "198208142012121004",
+    "email": "198208142012121004@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Subbagian, Subbagian Rencana Program dan Anggaran",
+    "is_active": 1
+  },
+  {
+    "name": "Nita Pujiastuti, S.E.",
+    "username": "198307032009122002",
+    "email": "198307032009122002@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Subbagian, Subbagian Kepegawaian dan Teknologi Informasi",
+    "is_active": 1
+  },
+  {
+    "name": "Hasan Basri, S.H.I.",
+    "username": "198608192011011014",
+    "email": "198608192011011014@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Subbagian, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "Hernawan, S.H.",
+    "username": "197803232008051001",
+    "email": "197803232008051001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Kepala Subbagian, Subbagian Keuangan dan Pelaporan",
+    "is_active": 1
+  },
+  {
+    "name": "Ulfah Kharimah, S.Sos",
+    "username": "199706032022032018",
+    "email": "199706032022032018@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Perencana Ahli Pertama, Sekretaris",
+    "is_active": 1
+  },
+  {
+    "name": "Firqoh Widyati, S.H.",
+    "username": "200007142024052001",
+    "email": "200007142024052001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Klerek - Analis Perkara Peradilan, Panitera Muda Hukum",
+    "is_active": 1
+  },
+  {
+    "name": "Muhamad Rasyid Wahdhani, S.H.",
+    "username": "199806302024051001",
+    "email": "199806302024051001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Klerek - Analis Perkara Peradilan, Panitera Muda Banding",
+    "is_active": 1
+  },
+  {
+    "name": "THIFAL ALYA HANIFAH, S.I.I.P.",
+    "username": "199809102025062012",
+    "email": "199809102025062012@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Arsiparis Ahli Pertama, Sekretaris",
+    "is_active": 1
+  },
+  {
+    "name": "ILHAMSYAH, S.E.",
+    "username": "199608252025061007",
+    "email": "199608252025061007@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Analis Pengelolaan Keuangan APBN Ahli Pertama, Sekretaris",
+    "is_active": 1
+  },
+  {
+    "name": "A ZULKIFLI, S.Kom.",
+    "username": "199511162025061004",
+    "email": "199511162025061004@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Penata Kelola Sistem dan Teknologi Informasi, Subbagian Kepegawaian dan Teknologi Informasi",
+    "is_active": 1
+  },
+  {
+    "name": "LUCKYTA FADLY, S.I.Kom.",
+    "username": "199107262025061006",
+    "email": "199107262025061006@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Penata Keprotokolan, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "ZAENAL ABIDIN, S.T.",
+    "username": "199711082025061006",
+    "email": "199711082025061006@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Teknisi Sarana dan Prasarana, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "SIDIQ AL FAJAR, A.Md.Kom.",
+    "username": "200005122025061006",
+    "email": "200005122025061006@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Dokumentalis Hukum, Panitera Muda Hukum",
+    "is_active": 1
+  },
+  {
+    "name": "NENSI OLIVIA PUSPITA SANTI, A.Md.A.B.",
+    "username": "200206162025062010",
+    "email": "200206162025062010@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Dokumentalis Hukum, Panitera Muda Banding",
+    "is_active": 1
+  },
+  {
+    "name": "JULI ANDANI SAPUTRA, S.E.",
+    "username": "199107092025211035",
+    "email": "199107092025211035@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Penata Layanan Operasional, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "NIZAR SURYA HERMAWAN",
+    "username": "200111292025211005",
+    "email": "200111292025211005@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Operator Layanan Operasional, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "DT. DAMSYUR MAMUJA",
+    "username": "199503132025211031",
+    "email": "199503132025211031@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Operator Layanan Operasional, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "RIZQI FADILLAH ARNANDY",
+    "username": "200306292025211001",
+    "email": "200306292025211001@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Operator Layanan Operasional, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  },
+  {
+    "name": "DIAN PRIYANTO",
+    "username": "199407062025211045",
+    "email": "199407062025211045@ptaku.go.id",
+    "role": "pegawai",
+    "unit_kerja": "Pengadilan Tinggi Agama Kalimantan Utara",
+    "jabatan": "Operator Layanan Operasional, Subbagian Tata Usaha dan Rumah Tangga",
+    "is_active": 1
+  }
+]
