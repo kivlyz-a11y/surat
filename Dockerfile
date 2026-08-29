@@ -68,8 +68,8 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 EXPOSE 80
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-    CMD curl -f http://localhost/auth/login || exit 1
+HEALTHCHECK --interval=20s --timeout=5s --start-period=5s --retries=3 \
+    CMD curl -f -L http://localhost/auth/login || exit 1
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
