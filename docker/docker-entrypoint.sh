@@ -25,9 +25,10 @@ if [ -n "$database_default_hostname" ] || [ -n "$DB_HOST" ]; then
     until php -r "
         \$host = getenv('database_default_hostname') ?: (getenv('DB_HOST') ?: 'db');
         \$user = getenv('database_default_username') ?: (getenv('DB_USER') ?: 'root');
-        \$pass = getenv('database_default_password') ?: (getenv('DB_PASSWORD') ?: '');
+        \$pass = getenv('database_default_password') ?: (getenv('DB_PASS') ?: (getenv('DB_PASSWORD') ?: ''));
+        \$db   = getenv('database_default_database') ?: (getenv('DB_NAME') ?: (getenv('DB_DATABASE') ?: ''));
         \$port = (int)(getenv('database_default_port') ?: (getenv('DB_PORT') ?: 3306));
-        \$mysqli = @new mysqli(\$host, \$user, \$pass, '', \$port);
+        \$mysqli = @new mysqli(\$host, \$user, \$pass, \$db, \$port);
         if (\$mysqli->connect_error) { exit(1); }
         exit(0);
     " 2>/dev/null || [ $COUNT -eq $MAX_TRIES ]; do

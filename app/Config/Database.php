@@ -199,6 +199,38 @@ class Database extends Config
         // we don't overwrite live data on accident.
         if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
+            return;
+        }
+
+        // Support direct Coolify / Docker environment variable naming
+        $host = getenv('DB_HOST') ?: env('DB_HOST', env('database.default.hostname'));
+        if (!empty($host)) {
+            $this->default['hostname'] = $host;
+        }
+
+        $database = getenv('DB_NAME') ?: (getenv('DB_DATABASE') ?: env('DB_NAME', env('DB_DATABASE', env('database.default.database'))));
+        if (!empty($database)) {
+            $this->default['database'] = $database;
+        }
+
+        $username = getenv('DB_USER') ?: (getenv('DB_USERNAME') ?: env('DB_USER', env('DB_USERNAME', env('database.default.username'))));
+        if (!empty($username)) {
+            $this->default['username'] = $username;
+        }
+
+        $password = getenv('DB_PASS') ?: (getenv('DB_PASSWORD') ?: env('DB_PASS', env('DB_PASSWORD', env('database.default.password'))));
+        if ($password !== null && $password !== false && $password !== '') {
+            $this->default['password'] = $password;
+        }
+
+        $port = getenv('DB_PORT') ?: env('DB_PORT', env('database.default.port'));
+        if (!empty($port)) {
+            $this->default['port'] = (int) $port;
+        }
+
+        $driver = getenv('DB_DRIVER') ?: env('DB_DRIVER', env('database.default.DBDriver'));
+        if (!empty($driver)) {
+            $this->default['DBDriver'] = $driver;
         }
     }
 }

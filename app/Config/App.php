@@ -190,6 +190,16 @@ class App extends BaseConfig
     {
         parent::__construct();
 
+        $envBaseUrl = getenv('APP_BASEURL') ?: (getenv('app.baseURL') ?: env('APP_BASEURL', env('app.baseURL')));
+        if (!empty($envBaseUrl)) {
+            $this->baseURL = rtrim($envBaseUrl, '/') . '/';
+            $parsedHost = parse_url($this->baseURL, PHP_URL_HOST);
+            if ($parsedHost && !in_array($parsedHost, $this->allowedHostnames, true)) {
+                $this->allowedHostnames[] = $parsedHost;
+            }
+            return;
+        }
+
         if (isset($_SERVER['HTTP_HOST'])) {
             $scheme = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
             $host   = $_SERVER['HTTP_HOST'];
