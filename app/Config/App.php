@@ -182,33 +182,35 @@ class App extends BaseConfig
     {
         parent::__construct();
 
-        // Trust reverse proxy (Cloudflare / Traefik) HTTPS headers
-        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https') {
+        // Detect HTTPS from Cloudflare / Traefik reverse proxies
+        $isHttps = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ||
+                   (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https') ||
+                   (isset($_SERVER['HTTP_CF_VISITOR']) && str_contains($_SERVER['HTTP_CF_VISITOR'], 'https'));
+
+        if ($isHttps) {
             $_SERVER['HTTPS'] = 'on';
             $_SERVER['SERVER_PORT'] = 443;
         }
 
+        $scheme = $isHttps ? 'https' : 'http';
+
+        // If accessed through browser / HTTP request, dynamically use client's exact domain & scheme
+        if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
+            $host = $_SERVER['HTTP_HOST'];
+            $this->baseURL = $scheme . '://' . $host . '/';
+            if (!in_array($host, $this->allowedHostnames, true)) {
+                $this->allowedHostnames[] = $host;
+            }
+            return;
+        }
+
+        // Fallback to ENV variable if running via CLI / Cron
         $envBaseUrl = getenv('APP_BASEURL') ?: (getenv('app.baseURL') ?: env('APP_BASEURL', env('app.baseURL')));
         if (!empty($envBaseUrl)) {
             $this->baseURL = rtrim($envBaseUrl, '/') . '/';
             $parsedHost = parse_url($this->baseURL, PHP_URL_HOST);
             if ($parsedHost && !in_array($parsedHost, $this->allowedHostnames, true)) {
                 $this->allowedHostnames[] = $parsedHost;
-            }
-            return;
-        }
-
-        if (isset($_SERVER['HTTP_HOST'])) {
-            $scheme = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
-            $host   = $_SERVER['HTTP_HOST'];
-            
-            $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
-            $dir = rtrim(str_replace('\\', '/', dirname($scriptName)), '/');
-            
-            if ($dir !== '' && $dir !== '/') {
-                $this->baseURL = $scheme . '://' . $host . $dir . '/';
-            } else {
-                $this->baseURL = $scheme . '://' . $host . '/';
             }
         }
     }
