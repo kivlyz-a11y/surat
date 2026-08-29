@@ -166,29 +166,24 @@ class App extends BaseConfig
      *
      * @var array<string, string>
      */
-    public array $proxyIPs = [];
+    public array|string $proxyIPs = '*';
 
     /**
      * --------------------------------------------------------------------------
      * Content Security Policy
      * --------------------------------------------------------------------------
-     *
-     * Enables the Response's Content Secure Policy to restrict the sources that
-     * can be used for images, scripts, CSS files, audio, video, etc. If enabled,
-     * the Response object will populate default values for the policy from the
-     * `ContentSecurityPolicy.php` file. Controllers can always add to those
-     * restrictions at run time.
-     *
-     * For a better understanding of CSP, see these documents:
-     *
-     * @see http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-     * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
 
     public function __construct()
     {
         parent::__construct();
+
+        // Trust reverse proxy (Cloudflare / Traefik) HTTPS headers
+        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https') {
+            $_SERVER['HTTPS'] = 'on';
+            $_SERVER['SERVER_PORT'] = 443;
+        }
 
         $envBaseUrl = getenv('APP_BASEURL') ?: (getenv('app.baseURL') ?: env('APP_BASEURL', env('app.baseURL')));
         if (!empty($envBaseUrl)) {
