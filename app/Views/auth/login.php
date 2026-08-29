@@ -89,19 +89,6 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(13, 122, 83, 0.4);
         }
-        .quick-badge {
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            padding: 0.4rem 0.75rem;
-            border-radius: 8px;
-            font-size: 0.78rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .quick-badge:hover {
-            background: #e2e8f0;
-            border-color: #cbd5e1;
-        }
     </style>
 </head>
 <body>
@@ -180,37 +167,12 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-login w-100 mb-4">
+                    <button type="submit" class="btn btn-login w-100 mb-2">
                         <i class="fa-solid fa-right-to-bracket me-2"></i> Masuk Sekarang
                     </button>
                 </form>
-
-                <!-- Demo Account Quick Helper -->
-                <div class="p-3 bg-light rounded-3 border">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span class="small fw-bold text-muted"><i class="fa-solid fa-key me-1 text-success"></i> Akun Uji Coba:</span>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button type="button" class="quick-badge" onclick="fillCredentials('admin', 'admin123')">
-                            <strong>Admin:</strong> admin / admin123
-                        </button>
-                        <button type="button" class="quick-badge" onclick="fillCredentials('pegawai1', 'pegawai123')">
-                            <strong>Pegawai:</strong> pegawai1 / pegawai123
-                        </button>
-                        <button type="button" class="quick-badge" onclick="fillCredentials('budi', 'budi123')">
-                            <strong>Pegawai 2:</strong> budi / budi123
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        function fillCredentials(user, pass) {
-            document.getElementById('inputUsername').value = user;
-            document.getElementById('inputPassword').value = pass;
-        }
-    </script>
 </body>
 </html>
